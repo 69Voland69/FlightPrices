@@ -1,0 +1,14 @@
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\bin\Debug\net8.0\FlightsWithKstops.exe
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\bin\Debug\net8.0\FlightsWithKstops.deps.json
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\bin\Debug\net8.0\FlightsWithKstops.runtimeconfig.json
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\bin\Debug\net8.0\FlightsWithKstops.dll
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\bin\Debug\net8.0\FlightsWithKstops.pdb
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.AssemblyInfoInputs.cache
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.AssemblyInfo.cs
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.csproj.CoreCompileInputs.cache
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.dll
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\refint\FlightsWithKstops.dll
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.pdb
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.genruntimeconfig.cache
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\ref\FlightsWithKstops.dll
