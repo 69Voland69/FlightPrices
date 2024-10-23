@@ -78,26 +78,46 @@ public class Solution
     {
         foreach (var link in node.Children)
         {
-            if (link.NodeTo.CheckedBy.Contains(node.NodeId))
+            if (link.NodeTo.CheckedBy.ContainsKey(node.NodeId))
             {
-                continue;
+                if (link.NodeTo.CheckedBy[node.NodeId] < link.Price + priceToGet)
+                {
+                    continue;
+                }
             }
             
             if (!link.NodeTo.HopsAndPrices.TryGetValue(stop, out var price))
             {
-                link.NodeTo.HopsAndPrices.Add(stop, link.Price + priceToGet);    
+                link.NodeTo.HopsAndPrices.Add(stop, link.Price + priceToGet);
             }
             else if(price > priceToGet + link.Price)
             {
                 link.NodeTo.HopsAndPrices[stop] = priceToGet + link.Price;
             }
         }
-
-        node.CheckedBy.Add(from); 
-
-        foreach (var link in node.Children.Where(x=>!x.NodeTo.CheckedBy.Contains(node.NodeId)))
+        
+        if (node.CheckedBy.ContainsKey(from))
         {
-            SetPrices(link.NodeTo, stop+1, link.Price, node.NodeId);
+            node.CheckedBy[from] = priceToGet;
+        }
+        else
+        {
+            node.CheckedBy.Add(from, priceToGet);
+        }
+
+    
+
+        foreach (var link in node.Children)
+        {
+            if (link.NodeTo.CheckedBy.TryGetValue(node.NodeId, out var price))
+            {
+                if (price < priceToGet + link.Price)
+                {
+                    continue;
+                }
+            }
+            
+            SetPrices(link.NodeTo, stop+1, link.Price+priceToGet, node.NodeId);
         }
 
     }
@@ -110,10 +130,10 @@ public class Solution
             HopsAndPrices = new Dictionary<int, int>();
             Children = new List<Link>();
             Parent = new List<Link>();
-            CheckedBy = new HashSet<int>();
+            CheckedBy = new Dictionary<int, int>();
         }
 
-        public HashSet<int> CheckedBy { get; set; }
+        public Dictionary<int, int> CheckedBy { get; set; }
 
         public int NodeId { get; set; }
         

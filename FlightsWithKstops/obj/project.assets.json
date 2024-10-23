@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\69Vol\\.nuget\\packages\\": {}
+    "C:\\Users\\Vladimir\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\69Vol\\RiderProjects\\FlightsWithKstops\\FlightsWithKstops\\FlightsWithKstops.csproj",
+      "projectUniqueName": "C:\\Prj\\FlightPrices\\FlightsWithKstops\\FlightsWithKstops.csproj",
       "projectName": "FlightsWithKstops",
-      "projectPath": "C:\\Users\\69Vol\\RiderProjects\\FlightsWithKstops\\FlightsWithKstops\\FlightsWithKstops.csproj",
-      "packagesPath": "C:\\Users\\69Vol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\69Vol\\RiderProjects\\FlightsWithKstops\\FlightsWithKstops\\obj\\",
+      "projectPath": "C:\\Prj\\FlightPrices\\FlightsWithKstops\\FlightsWithKstops.csproj",
+      "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
+      "outputPath": "C:\\Prj\\FlightPrices\\FlightsWithKstops\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\69Vol\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.306/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Vladimir\\.dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
