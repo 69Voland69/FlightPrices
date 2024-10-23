@@ -12,3 +12,4 @@ C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.
 C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.pdb
 C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.genruntimeconfig.cache
 C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\ref\FlightsWithKstops.dll
+C:\Users\69Vol\RiderProjects\FlightsWithKstops\FlightsWithKstops\obj\Debug\net8.0\FlightsWithKstops.sourcelink.json
