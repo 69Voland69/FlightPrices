@@ -3,7 +3,7 @@ public class Solution
     public int FindCheapestPrice(int n, int[][] flights, int src, int dst, int k)
     {
         var a = GetGraph(flights, src, out Dictionary<int,Node> nodes);
-        SetPrices(a, 0, 0, src,k);
+        SetPrices(a, 0, 0, src,k, new HashSet<int>());
 
         var ds = nodes[dst];
         var bestPrice = ds.HopsAndPrices.Where(x => x.Key <= k).Select(x => x.Value).OrderBy(x=>x).FirstOrDefault();
@@ -26,6 +26,7 @@ public class Solution
             }
 
             var destination = flight[1];
+           
             var price = flight[2];
 
             nodes.TryGetValue(destination, out var destNode);
@@ -36,7 +37,10 @@ public class Solution
                 nodes.Add(destination, destNode);
 
             }
-
+            if (destination == src)
+            {
+                continue;
+            }
             var newLink = new Link()
             {
                 NodeFrom = srcNode,
@@ -51,21 +55,22 @@ public class Solution
 
     }
 
-    public void SetPrices(Node node, int stop, int priceToGet, int from, int maxStops)
+    
+
+    public void SetPrices(Node node, int stop, int priceToGet, int from, int maxStops, HashSet<int> path)
     {
-        if (stop > maxStops)
+        if (stop > maxStops || path.Contains(node.NodeId))
         {
             return;
         }
-        
+
+        var linksToExclude = new HashSet<int>();
         foreach (var link in node.Children)
         {
-            if (link.NodeTo.CheckedBy.ContainsKey(node.NodeId))
+            if (link.NodeTo.HopsAndPrices.Any() && link.NodeTo.HopsAndPrices.All(x => x.Key < stop && x.Value <= link.Price + priceToGet))
             {
-                if (link.NodeTo.CheckedBy[node.NodeId] < link.Price + priceToGet)
-                {
-                    continue;
-                }
+                linksToExclude.Add(link.NodeTo.NodeId);
+                continue;
             }
             
             if (!link.NodeTo.HopsAndPrices.TryGetValue(stop, out var price))
@@ -78,29 +83,18 @@ public class Solution
             }
         }
         
-        if (node.CheckedBy.ContainsKey(from))
-        {
-            node.CheckedBy[from] = priceToGet;
-        }
-        else
-        {
-            node.CheckedBy.Add(from, priceToGet);
-        }
-
+       path.Add(node.NodeId);
     
-
         foreach (var link in node.Children)
         {
-            if (link.NodeTo.CheckedBy.TryGetValue(node.NodeId, out var price))
+            if (linksToExclude.Contains(link.NodeTo.NodeId))
             {
-                if (price < priceToGet + link.Price)
-                {
-                    continue;
-                }
+                continue;
             }
-            
-            SetPrices(link.NodeTo, stop+1, link.Price+priceToGet, node.NodeId,maxStops);
+            SetPrices(link.NodeTo, stop+1, link.Price+priceToGet, node.NodeId,maxStops, path);
         }
+
+        path.Remove(node.NodeId);
 
     }
     

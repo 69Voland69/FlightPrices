@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlightsWithKstops")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0efa4a7485c72f16b3f716992a4aea3c6228cbf0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+803f772e6dbc8c51d1201a6b0d6acc01aec26a9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlightsWithKstops")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlightsWithKstops")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
